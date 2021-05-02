@@ -2,7 +2,6 @@ OUTPUT_FORMAT(elf64-x86-64)
 ENTRY (main)
 
 SECTIONS {
-	KernelStart = .;
     .text : ALIGN(0x1000) {
         *(.text)
     }
@@ -16,5 +15,4 @@ SECTIONS {
         *(COMMON)
         *(.bss)
     }
-	KernelEnd = .;
 }
